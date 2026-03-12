@@ -74,9 +74,9 @@ const VideoCard: React.FC<VideoCardProps> = memo(({ video, onClick }) => {
         {!videoError ? (
           <video 
             ref={videoRef}
-            src={isInView || isHovered ? `${video.videoUrl}#t=0.1` : undefined} 
+            src={`${video.videoUrl}#t=0.1`} 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            preload={isInView || isHovered ? "metadata" : "none"}
+            preload="metadata"
             muted
             loop
             playsInline
